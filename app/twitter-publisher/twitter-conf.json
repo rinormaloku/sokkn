@@ -1,0 +1,7 @@
+{
+  "twitter4j.debug": "true",
+  "twitter4j.oauth.consumerKey":  "crvrNUaSazdwTLYOgO0HsKPVs",
+  "twitter4j.oauth.consumerSecret": "BwoGAXIzBiAXOUn5ifloGLdOzvW9C4vLuVrp99cono9pcMsnqw",
+  "twitter4j.oauth.accessToken":  "1140640717649391616-EIhi0uAZta9BmTQZ38rStKnUrxIReD",
+  "twitter4j.oauth.accessTokenSecret": "sANza4I0KlC59ZSANOfsfvRZi0xTBMLlOkCoSAZbqx7ow"
+}

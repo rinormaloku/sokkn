@@ -1,0 +1,4 @@
+{
+  "SERVER_PORT" : "8080",
+  "EVENT_BROKER_URL" : "default-broker.default.svc.cluster.local"
+}

@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: event-display
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "1"
+        autoscaling.knative.dev/maxScale: "4"
+        autoscaling.knative.dev/minScale: "1"
+    spec:
+      containers:
+        - image: index.docker.io/rinormaloku/event_display
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthZ
+              scheme: HTTP
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 10

@@ -1,0 +1,16 @@
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: recognition-triggerer
+  namespace: default
+spec:
+  # More about filtering: https://github.com/knative/eventing/blob/master/docs/broker/filtering.md
+  filter:
+    sourceAndType:
+      type: webapp.image.uploaded
+  subscriber:
+  # https://knative.dev/docs/reference/eventing/#SubscriberSpec use uri instead of the service for Aspnet core.
+    ref:
+      apiVersion: serving.knative.dev/v1alpha1
+      kind: Service
+      name: recognition-service

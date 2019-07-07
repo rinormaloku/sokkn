@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: helloworld-go
+  namespace: default
+spec:
+  template:
+    metadata:
+      name: helloworld-go-2
+    spec:
+      containers:
+      - image: docker.io/rinormaloku/helloworld-go
+        env:
+        - name: TARGET
+          value: "Go Sample v2"
+  traffic:
+  - tag: current
+    revisionName: helloworld-go-1
+    percent: 80
+  - tag: updated
+    revisionName: helloworld-go-2
+    percent: 20

@@ -1,0 +1,36 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: twitter-publisher
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "10"
+        autoscaling.knative.dev/maxScale: "4"
+        autoscaling.knative.dev/minScale: "1"
+    spec:
+      containers:
+      - image: rinormaloku/lovely-faces-twitter-publisher
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthZ
+              scheme: HTTP
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 10
+        env:
+        - name: twitter4j.debug
+          value: "true"
+        - name: twitter4j.oauth.consumerKey
+          value: crvrNUaSazdwTLYOgO0HsKPVs
+        - name: twitter4j.oauth.consumerSecret
+          value: BwoGAXIzBiAXOUn5ifloGLdOzvW9C4vLuVrp99cono9pcMsnqw
+        - name: twitter4j.oauth.accessToken
+          value: 1140640717649391616-EIhi0uAZta9BmTQZ38rStKnUrxIReD
+        - name: twitter4j.oauth.accessTokenSecret
+          value: sANza4I0KlC59ZSANOfsfvRZi0xTBMLlOkCoSAZbqx7ow

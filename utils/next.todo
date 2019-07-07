@@ -1,0 +1,13 @@
+☐ Reverse engineer creation of a knative service
+☐ Describe what is a serverless service?
+
+
+
+
+
+
+
+Telepresence ➜  knative telepresence --swap-deployment event-display-dm665-deployment --env-json event-display-env.json
+
+$$$FIND
+kubectl run -i --tty sat --image=rinormaloku/swiss-army-tests --restart=Never -- /bin/bash   

@@ -1,0 +1,23 @@
+version: "2.0"
+
+services:
+  face-recog:
+    build: 
+      context: ./recognition
+    image: rinormaloku/lovely-faces-recognition
+    ports:
+    - "8080:8080"
+
+  webapp:
+    build: 
+      context: ./webapp
+    image: rinormaloku/lovely-faces-webapp
+    ports:
+    - "5000:5000"
+
+  twitter-publisher:
+    build: 
+      context: ./twitter-publisher
+    image: rinormaloku/lovely-faces-twitter-publisher
+    ports:
+    - "8080:8080"

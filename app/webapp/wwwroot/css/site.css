@@ -1,0 +1,92 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+#dropzone {
+  background-color: black;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.opacity-transitions {
+  -webkit-transition: all  650ms ease-in-out;
+  -moz-transition: all  650ms ease-in-out;
+  -o-transition: all  650ms ease-in-out;
+  transition: all  650ms ease-in-out;
+}
+
+form#uploader{
+  opacity: 0.8;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255, 0.4);
+  font-size: x-large;
+  border: 0;
+  height: 400px;background-repeat: no-repeat;
+  background-image: url(../images/boy-1.jpeg);
+}
+
+form#uploader:hover{
+  opacity: 0.6;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.2);
+  color: rgba(255,255,255, 1);
+}
+
+#messagesList div {
+  margin: 15px;
+}

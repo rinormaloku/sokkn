@@ -1,0 +1,36 @@
+﻿@page
+
+
+<div class="row justify-content-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+        <img src="images/lovely-faces-bevel.png" width="368px" alt="">
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div id="dropzone">
+            <form action="/image" class="dropzone needsclick dz-clickable opacity-transitions" id="uploader">
+                <div class="dz-message needsclick">
+                    Drop here your lovely face, or click to upload!<br>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <ul id="messagesList"></ul>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/event.js"></script>
+<script src="~/lib/dropzone/dist/min/dropzone.min.js"></script>
+<script src="~/js/options.js"></script>
